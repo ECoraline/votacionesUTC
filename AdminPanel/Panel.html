@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin</title>
+    <link rel="stylesheet" href="AdminPanel.css">
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+        <main class="contenidoPrincipal">
+        
+
+         <section class="tarjetas">
+            <div class="tarjeta">
+                
+                <h3>Alumnos Registrados</h3>
+                <p id="alumnosRegistrados">50</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Sin Adeudo</h3>
+                    <p id="sinAdeudo">9</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Con Adeudo</h3>
+                    <p id="conAdeudo">160</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Total Recaudado</h3>
+                    <p id="totalRecaudado">$25</p>
+                </div>
+            </section>
+            <section class="seccionTabla">    
+            <h2>Lista Pagos</h2>
+            <table>
+            <thead>
+                <tr>
+                <th>Alumno</th>
+                <th>ID</th>
+                <th>Fecha Pago</th>
+                <th>Estado</th>
+                </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                        <td>Jkmkmk</td>
+                        <td>#1</td>
+                        <td>01/10/2025</td>
+                        <td>
+                            <button class="estadoPago pagado" onclick="cambiarEstado(this)">Pagado</button>
+                        </td>
+                        <tr>
+                        <td>Jwnjdjwk</td>
+                        <td>#2</td>
+                        <td></td>
+                        <td>
+                            <button class="estadoPago adeudo" onclick="cambiarEstado(this)">Con Adeudo</button>
+                        </td>
+                        </tr>
+                        <tr>
+
+                    </tr>
+                    </tbody>
+            </table>
+            </section>
+        </main>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "pruevita2";
+  src: url(Fuentes/Spookyman.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #1e1b2e;
+  font-family: 'Segoe UI', sans-serif;
+  color: #eee;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'pruevita2', Spookyman;
+  text-align: center;
+  color: #c084fc;
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+
+.contenedorBarra {
+  margin-bottom: 1.5rem;
+}
+
+.etiqueta {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.barra {
+  height: 30px;
+  background: linear-gradient(to right, #a855f7, #9333ea);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(147, 51, 234, 0.3);
+  transition: width 0.5s ease;
+}
+
+.cantidadVotos {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: #d8b4fe;
+}
+
+.contenedorRelleno {
+  background-color: #3b3055;
+  border-radius: 6px;
+  overflow: hidden;
+}

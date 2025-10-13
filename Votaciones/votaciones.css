@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "pruevita2" ;
+    src: url(Fuentes/Spookyman.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#titulo{
+    font-family:pruevita2,Spookyman ;
+    color: black;
+    position: relative;
+    bottom: 0px;
+    font-size: 60px;
+    top: 150px;
+    left: 350px;
+}
+#fondo{
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #a850ebff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px; 
+  position: relative;
+  overflow: hidden; 
+
+    
+}
+
+#tulio{
+    position: relative;
+    top: 25px;
+    left: 500px;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+.seccionBusqueda {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.seccionBusqueda input {
+  padding: 10px;
+  width: 250px;
+  border: 2px solid #ccc;
+  background-color: #a850ebff;
+  border-radius: 5px;
+  
+}
+
+.seccionBusqueda button {
+  padding: 10px 20px;
+  background-color: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.seccionBusqueda button:hover {
+  background-color: #3656d4;
+}
+
+.contenedorParticipante{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+input::placeholder{
+color: black;
+}
+
+.tarjetaParticipante{
+  background-color: #cfadff82;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tarjetaParticipante img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.infoParticipante{
+  padding: 10px;
+}
+
+.descripcionParticipante{
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.tarjetaParticipante.expandida{
+  transform: scale(1.05);
+}
+
+.tarjetaParticipante.expandida .descripcionParticipante {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 768px) {
+
+
+
+#titulo{
+    font-family:pruevita2,Spookyman ;
+    color: black;
+    position: relative;
+    bottom: 0px;
+    font-size: 60px;
+    top: 110px;
+    left: 40px;
+}
+#fondo{
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #a850ebff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px; 
+  position: relative;
+  overflow: hidden; 
+
+    
+}
+
+#tulio{
+    position: relative;
+    top: 25px;
+    left: 500px;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+.seccionBusqueda {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  position: relative;
+  left: 140px;
+  bottom: 30px;
+
+}
+
+.seccionBusqueda input {
+  padding: 10px;
+  width: 250px;
+  border: 2px solid #ccc;
+  background-color: #a850ebff;
+  border-radius: 5px;
+  
+}
+
+.seccionBusqueda button {
+  padding: 10px 20px;
+  background-color: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  right: 200px;
+  top: 60px;
+  
+}
+
+.seccionBusqueda button:hover {
+  background-color: #3656d4;
+}
+
+.contenedorProductos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+input::placeholder{
+color: black;
+}
+
+.tarjetaProducto {
+  background-color: #cfadff82;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tarjetaProducto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.infoProducto {
+  padding: 10px;
+}
+
+.descripcionProducto {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.tarjetaProducto.expandida {
+  transform: scale(1.05);
+}
+
+.tarjetaProducto.expandida .descripcionProducto {
+  display: block;
+}
+
+
+}

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: lightgrey;
+    color: #333;
+}
+
+.contenedor {
+    display: flex;
+    height: 100vh;
+}
+
+.contenidoPrincipal {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+.encabezado {
+    height: 60px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.tarjeta h3 {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1f2544;
+}
+
+.seccionTabla {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.seccionTabla h2 {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f0f4f9;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.estadoPago {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+}
+
+.pagado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.adeudo {
+    background: #f8d7da;
+    color: #721c24;
+}

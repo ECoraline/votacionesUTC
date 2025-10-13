@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="Login.css" />
+    </head>
+    <body>
+    <div id="Contenedor">
+        <label id="titulo">Ingrese su usuario y Contraseña</label>
+        <form id="loginForm">
+            <div class="campo">
+                <input type="text" id="usuario" placeholder="   Usuario" required />
+            </div>
+            <div class="campo">
+                <input type="password" id="password" placeholder="   Contraseña" required />
+            </div>
+            <div id="boton">
+                <button type="submit" id="Iniciar">INICIAR SESION</button>
+            </div>
+        </form>
+    </div>
+
+    <img id="Icono" src="Imagenes/bitmap.png" width="150px" height="150px" />
+
+    <script>
+        const form = document.getElementById("loginForm");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); 
+            const usuario = document.getElementById("usuario").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (usuario === "admin" && password === "password") {
+                window.location.href = "/AdminPanel/Panel.html";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        });
+    </script>
+</body>
+</html>

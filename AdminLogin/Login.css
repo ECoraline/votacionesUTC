@@ -1,0 +1,213 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+
+
+#Contenedor{
+    border-radius: 30px;
+    display: flex;
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    flex-direction:column;
+    justify-content:center;
+    margin-top: 120px;
+    position: relative;
+    left: 80px;
+}
+
+.campo{
+    background-color:lightgray ;
+    width: 350px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    left: 15px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    top: 10px;
+    border-radius: 5px;
+    
+    
+   
+}
+#password{
+width: 270px;
+height: 50px;
+background-color: transparent;
+border: none;
+}
+
+#boton{
+     background-color:transparent ;
+    width: 350px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    left: 40px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    top: 10px;
+    border-radius: 5px;
+
+   
+}
+
+#usuario{
+
+width: 270px;
+height: 50px;
+background-color: transparent;
+border: none;
+}
+
+#Iniciar{
+
+
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    right: 23px;
+    background-color: #4a50feff;
+    font-size: 15px;
+    color: white;
+
+}
+
+
+#titulo{
+font-size: 20px;
+position: relative;
+left: 55px;
+
+}
+
+#Icono{
+
+position: relative ;
+right: 202px;
+top: 40px;
+}
+
+body{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+
+@media(max-width: 768px) {
+
+
+
+#Contenedor{
+    border-radius: 30px;
+    display: flex;
+    background-color: white;
+    width: 350px;
+    height: 450px;
+  position: relative;
+  left: 75px;
+    margin-top: 120px;
+}
+
+.campo{
+    background-color:lightgray ;
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    left: 15px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    top: 10px;
+    border-radius: 5px;
+    
+    
+   
+}
+#password{
+width: 270px;
+height: 50px;
+background-color: transparent;
+border: none;
+}
+
+#boton{
+     background-color:transparent ;
+    width: 350px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    left: 40px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    top: 10px;
+    border-radius: 5px;
+
+   
+}
+
+#usuario{
+
+width: 270px;
+height: 50px;
+background-color: transparent;
+border: none;
+}
+
+#Iniciar{
+
+
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    right: 23px;
+    background-color: #4a50feff;
+    font-size: 15px;
+    color: white;
+
+}
+
+
+#titulo{
+font-size: 20px;
+position: relative;
+left: 35px;
+
+}
+
+#Icono{
+
+position: relative ;
+right: 178px;
+top: 40px;
+}
+
+body{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+}

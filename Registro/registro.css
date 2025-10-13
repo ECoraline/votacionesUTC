@@ -1,0 +1,326 @@
+@font-face {
+    font-family: "pruevita1" ;
+    src: url(Fuentes/HeadingNowTrial-55Medium.ttf) format("opentype");
+    font-weight: normal;
+    font-style: normal;;
+}
+@font-face {
+    font-family: "pruevita2" ;
+    src: url(Fuentes/BebasNeue-Regular.ttf) format("opentype");
+    font-weight: normal;
+    font-style: normal;;
+}
+@font-face {
+    font-family: "pruevita3" ;
+    src: url(Fuentes/Roboto-Light.ttf) format("opentype");
+    font-weight: normal;
+    font-style: normal;;
+}
+
+#titulo{
+    font-family: "pruevita3",Roboto-Light;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.txt2{
+    font-family: "pruevita3",Roboto-Light;
+    color: white;
+    padding: 10px;
+
+
+
+    
+}
+
+
+
+body{
+    background-image:url(Imagenes/dibujo2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+h1{
+    font-family: "pruevita1",HeadingNowTrial-55Medium;
+    
+    color: white;
+    font-size: 45px;
+    margin-left: 65px;
+    margin-top: 310px;
+}
+
+
+h2{
+ font-family: "pruevita2",BebasNeue-Regular;
+    color: white;
+    margin-left: 300px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows:100% 25% 25%;
+    grid-template-columns:50% 25% 25%  ;
+    
+}
+
+textarea{
+    font-family: "pruevita3",Roboto-Light;
+    color: black;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    resize: none;
+}
+#Registro{
+    font-family: "pruevita1",HeadingNowTrial-55Medium;
+    font-size: medium;
+    border-radius: 60px;
+    width: 200px;
+    height: 50px;
+    margin-left: 180px;
+}
+
+.btn{
+    font-family: "pruevita1",HeadingNowTrial-55Medium;
+    font-size: medium;
+   
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    
+}
+
+select{
+     border-color: white;
+
+    border: 1px solid white;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 40px;
+    font-family: "pruevita3",Roboto-Light;
+    
+    
+    width: 200px;
+    height: 30px;
+    color: black;
+}
+
+
+.item2{
+    margin-left: 50px;
+   
+}
+.item3{
+   margin-left: 50px;
+   margin-top: 120px;
+}
+
+.txt4{
+    font-family: "pruevita3",Roboto-Light;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 0px;
+    
+    
+}
+
+.txt5{
+    font-family: "pruevita3",Roboto-Light;
+    color: rgb(255, 255, 255);
+}
+
+#txt{
+    border-color: white;
+
+    border: 1px solid white;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border-radius: 40px;
+    font-family: "pruevita3",Roboto-Light;
+    color: white;
+    
+    width: 200px;
+    height: 30px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 768px) {
+
+#titulo{
+    font-family: "pruevita3",Roboto-Light;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    display: none;
+}
+
+.txt2{
+    font-family: "pruevita3",Roboto-Light;
+    color: rgb(255, 255, 255);   
+}
+
+.txt4{
+    font-family: "pruevita3",Roboto-Light;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 50px;
+    
+    
+}
+
+.txt5{
+    font-family: "pruevita3",Roboto-Light;
+    color: rgb(255, 255, 255);
+}
+
+
+
+body{
+    background-image:url(Imagenes/bitmap2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+h1{
+    font-family: "pruevita1",HeadingNowTrial-55Medium;
+    
+    color: white;
+    font-size: 45px;
+    margin-left: 5px;
+    margin-top: 310px;
+    display: none;
+}
+
+
+h2{
+ font-family: "pruevita2",BebasNeue-Regular;
+    color: white;
+    margin-left: 300px;
+    font-size: 30px;
+    margin-top: 10px;
+    display: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:0% 50% 50% 0% ;
+    
+}
+
+textarea{
+    font-family: "pruevita3",Roboto-Light;
+    color: black;
+    width: 350px;
+    height: 100px;
+    margin-top: 60px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    resize: none;
+}
+#Registro{
+position: relative;
+top: 60px;
+right: 100px;
+
+
+
+}
+
+
+button{
+    font-family: "pruevita1",HeadingNowTrial-55Medium;
+    font-size: medium;
+    border-radius: 60px;
+    margin-top: 5px;
+    width: 200px;
+    height: 50px;
+    margin-left: 85px;
+}
+select{
+     border-color: white;
+
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 40px;
+    font-family: "pruevita3",Roboto-Light;
+    
+    margin-bottom: 5px;
+    width: 175px;
+    height: 30px;
+    color: black;
+}
+
+
+.item2{
+    margin-top: 150px;
+    margin-left: 10px;
+    
+}
+.item3{
+   margin-left: 1px;
+   margin-top: 170px;
+}
+
+#Imagen{
+    position: relative;
+    top: 200px;
+    right: 100px;
+}
+
+#Imagen2{
+    position: relative;
+    top: 195px;
+    right: 110px;
+}
+
+
+#txt{
+    border-color: white;
+
+    border: 1px solid white;
+    margin-bottom: 4px;
+    background-color: transparent;
+    border-radius: 40px;
+    font-family: "pruevita3",Roboto-Light;
+    color: white;
+    
+    width: 170px;
+    height: 30px;
+   
+}
+}
