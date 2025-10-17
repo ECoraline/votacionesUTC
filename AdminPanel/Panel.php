@@ -77,11 +77,13 @@ if (!isset($_SESSION['admin_id'])) {
                     </tbody>
             </table>
             </section>
+            <a href="../php/logout.php" class="boton-logout">Cerrar Sesión</a>
         </main>
     </div>
 
     
 
     <script src="script.js"></script>
+    
 </body>
 </html>

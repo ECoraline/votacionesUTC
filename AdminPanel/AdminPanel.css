@@ -98,3 +98,19 @@ th, td {
     background: #f8d7da;
     color: #721c24;
 }
+
+.boton-logout {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #d9534f; /* Un color rojo para 'logout' */
+            color: white;
+            text-align: center;
+            text-decoration: none; /* Quita el subrayado del enlace */
+            border-radius: 5px;    /* Bordes redondeados */
+            border: none;
+            cursor: pointer;
+            font-family: sans-serif; /* Para que la letra se vea bien */
+        }
+        .boton-logout:hover {
+            background-color: #c9302c; /* Un rojo más oscuro al pasar el mouse */
+        }
