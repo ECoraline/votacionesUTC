@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Comprueba si la variable de sesión 'admin_id' NO está definida.
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: ../AdminLogin/Login.html'); // Asegúrate que esta ruta a tu login sea correcta.
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

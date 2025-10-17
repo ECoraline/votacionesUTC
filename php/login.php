@@ -1,55 +1,52 @@
 <?php
-// Inicia la sesión para poder guardar variables de sesión
+// 🔐 PASO 1: Iniciar la sesión
 session_start();
 
-// Verifica que los datos hayan sido enviados por el método POST
+// PASO 2: Verificar que los datos se envíen por POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Incluye el archivo de conexión a la base de datos
+    // PASO 3: Incluir la conexión a la base de datos
     require_once 'conexion.php';
 
-    // Recupera el email y la contraseña del formulario
-    $email = $_POST['email']; // Asegúrate que el 'name' en tu HTML sea 'email'
-    $password = $_POST['password']; // Asegúrate que el 'name' en tu HTML sea 'password'
+    // PASO 4: Obtener los datos del formulario (esto estaba bien)
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     try {
-        // Prepara la consulta SQL para buscar al usuario por su email
-        // Usamos consultas preparadas para evitar inyección SQL
-        $sql = "SELECT id, email, password FROM usuarios WHERE email = ?";
+        // PASO 5: Preparar la consulta SQL con los nombres de tu tabla y columnas (esto estaba bien)
+        $sql = "SELECT id_admin, usuario, contraseña FROM administrador WHERE usuario = ?";
         $stmt = $pdo->prepare($sql);
+        $stmt->execute([$username]);
 
-        // Ejecuta la consulta pasando el email como parámetro
-        $stmt->execute([$email]);
+        // Obtenemos la fila del administrador (si existe)
+        $admin = $stmt->fetch();
 
-        // Obtiene el resultado de la consulta
-        $user = $stmt->fetch();
-
-        // Verifica si se encontró un usuario y si la contraseña coincide
-        // usamos password_verify() para comparar la contraseña enviada con el hash guardado
-        if ($user && password_verify($password, $user['password'])) {
+        // PASO 6: Verificar el administrador y la contraseña
+        if ($admin && password_verify($password, $admin['contraseña'])) {
             
-            // ¡Credenciales correctas!
-            // Guardamos información del usuario en la sesión
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_email'] = $user['email'];
+            // ¡ÉXITO! Credenciales correctas.
+            
+            // ✅ CORRECCIÓN: Usamos los nombres de columna correctos de tu base de datos.
+            $_SESSION['admin_id'] = $admin['id_admin'];
+            $_SESSION['admin_usuario'] = $admin['usuario'];
 
-            // Redirigimos al usuario a una página de bienvenida o al panel de control
-            header("Location: ../dashboard.php"); // Redirige a una página segura
-            exit(); // Es importante terminar el script después de una redirección
+            // Redirigimos al panel de administrador
+            header("Location: ../AdminPanel/Panel.php");
+            exit();
 
         } else {
-            // Credenciales incorrectas
-            // Redirigimos de vuelta al login con un mensaje de error
-            header("Location: ../login.html?error=1");
+            // ERROR: Usuario o contraseña incorrectos.
+            header("Location: ../login.html?error=credenciales_invalidas");
             exit();
         }
 
     } catch (PDOException $e) {
-        // Manejo de errores de la base de datos
-        die("Error en la consulta: " . $e->getMessage());
+        // Si hay un error con la base de datos, redirigimos con un error.
+        header("Location: ../login.html?error=db_error");
+        exit();
     }
 } else {
-    // Si alguien intenta acceder al script directamente sin enviar datos, lo redirigimos
+    // Si alguien intenta acceder a este archivo directamente, lo mandamos al login.
     header("Location: ../login.html");
     exit();
 }
