@@ -1,76 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" type="text/css" href="Normalize.css">
-    <link rel="stylesheet" type="text/css" href="registro.css">
-</head>
-<body>
-
-<div class="container">
-    <div class="item1">
-        <h1>CONCURSO DE DISFRACES UTC</h1>
-        <h2>2025</h2>
-    </div>
-
-    <div class="formulario">
-        <form action="Registrar" method="post" enctype="multipart/form-data">
-            <h3 id="titulo">Registrate para concursar</h3>
-
-            <div class="columna">
-                <label class="txt2">Nombre:</label>
-                <input type="text" class="campo-input">
-
-                <label class="txt2">Apellido Materno:</label>
-                <input type="text" class="campo-input">
-
-                <label class="txt2">Numero Telefonico:</label>
-                <input type="tel" class="campo-input">
-
-                <label class="txt2">Grupo:</label>
-                <select class="campo-input">
-                <option>Ingenieria en sistemas</option>
-                <option>Arquitectura</option>
-                <option>Criminalistica</option>
-                <option>Diseño</option>
-                <option>Administracion</option>
-                </select>
-
-
-
-                <label class="txt4">Descripcion del disfraz:</label>
-                <textarea class="campo-input"></textarea>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registro</title>
+        <link rel="stylesheet" type="text/css" href="Normalize.css" />
+        <link rel="stylesheet" type="text/css" href="registro.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="item1">
+                <h1>CONCURSO DE DISFRACES UTC</h1>
+                <h2>2025</h2>
             </div>
+            <div class="formulario">
+                <form
+                    action="../php/registrar.php"
+                    method="post"
+                    enctype="multipart/form-data"
+                >
+                    <h3 id="titulo">Regístrate para concursar</h3>
 
-            <div class="columna">
-                <label class="txt2">Apellido Paterno:</label>
-                <input type="text" class="campo-input">
+                    <div class="columna">
+                        <label class="txt2">Nombre:</label>
+                        <input
+                            type="text"
+                            class="campo-input"
+                            name="nombre"
+                            required
+                        />
 
-                <label class="txt2">Correo Institucional:</label>
-                <input type="email" class="campo-input">
+                        <label class="txt2">Apellido Paterno:</label>
+                        <input
+                            type="text"
+                            class="campo-input"
+                            name="apellido_p"
+                            required
+                        />
 
-                <label class="txt2">Academia:</label>
-                <select class="campo-input">
-                <option>Ingenieria en sistemas</option>
-                <option>Arquitectura</option>
-                <option>Criminalistica</option>
-                <option>Diseño</option>
-                <option>Administracion</option>
-                </select>
+                        <label class="txt2">Apellido Materno:</label>
+                        <input
+                            type="text"
+                            class="campo-input"
+                            name="apellido_m"
+                            required
+                        />
 
-                <label class="txt5">Nombre del Disfraz:</label>
-                <input type="text" class="campo-input">
+                        <label class="txt2">Correo Institucional:</label>
+                        <input
+                            type="email"
+                            class="campo-input"
+                            name="correo"
+                            required
+                        />
 
-                <label id="Imagen2" class="txt2">Fotografia del disfraz:</label>
-                <input type="file" class="btn">
+                        <label class="txt2">Matrícula:</label>
+                        <input
+                            type="text"
+                            class="campo-input"
+                            name="matricula"
+                            required
+                        />
+
+                        <label class="txt2">Número Telefónico:</label>
+                        <input
+                            type="tel"
+                            class="campo-input"
+                            name="telefono"
+                            required
+                        />
+                    </div>
+
+                    <div class="columna">
+                        <label class="txt2">Academia:</label>
+                        <select class="campo-input" name="academia" required>
+                            <option>Ingeniería en Sistemas</option>
+                            <option>Arquitectura</option>
+                            <option>Criminalística</option>
+                            <option>Diseño</option>
+                            <option>Administración</option>
+                        </select>
+
+                        <label class="txt2">Grupo:</label>
+                        <select class="campo-input" name="grupo" required>
+                            <option>Ingeniería en Sistemas</option>
+                            <option>Arquitectura</option>
+                            <option>Criminalística</option>
+                            <option>Diseño</option>
+                            <option>Administración</option>
+                        </select>
+
+                        <label class="txt2">Categoría:</label>
+                        <select class="campo-input" name="categoria" required>
+                            <option value="HAL">Halloween</option>
+                            <option value="MUER">Día de Muertos</option>
+                            <option value="LIB">Libre</option>
+                        </select>
+
+                        <label class="txt5">Nombre del Disfraz:</label>
+                        <input
+                            type="text"
+                            class="campo-input"
+                            name="nombre_disfraz"
+                            required
+                        />
+
+                        <label class="txt4">Descripción del disfraz:</label>
+                        <textarea
+                            class="campo-input"
+                            name="descripcion"
+                            required
+                        ></textarea>
+
+                        <label id="Imagen2" class="txt2"
+                            >Fotografía del disfraz:</label
+                        >
+                        <input
+                            type="file"
+                            class="btn"
+                            name="foto_disfraz"
+                            required
+                        />
+                    </div>
+
+                    <input id="Registro" type="submit" value="REGISTRARSE" />
+                </form>
             </div>
-
-            <input id="Registro" type="submit" value="REGISTRARSE">
-        </form>
-    </div>
-</div>
-
-</body>
+        </div>
+    </body>
 </html>
