@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="Normalize.css" />
         <link rel="stylesheet" type="text/css" href="Login.css" />
     </head>
     <body>
@@ -33,7 +34,7 @@
             const password = document.getElementById("password").value;
 
             if (usuario === "admin" && password === "password") {
-                window.location.href = "/AdminPanel/Panel.html";
+                window.location.href = "../AdminPanel/Panel.html";
             } else {
                 alert("Usuario o contraseña incorrectos");
             }

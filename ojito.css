@@ -1,25 +1,26 @@
 @font-face {
-    font-family: "pruevita" ;
+    font-family: "pruevita";
     src: url(Fonts/shloprg.otf) format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "pruevita2" ;
+    font-family: "pruevita2";
     src: url(Fonts/Montserrat-Medium.ttf) format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
-html, body{
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-body{
+body {
     background-image: url(Imagenes/dibujo.png);
     background-size: cover;
     background-position: center;
@@ -28,11 +29,7 @@ body{
     margin: 0;
 }
 
-
-
-#mail{
-    
-
+#mail {
     font-family: "pruevita2", Montserrat-Medium;
     font-size: normal;
     margin-top: 2px;
@@ -42,147 +39,122 @@ body{
     margin-bottom: 0;
     margin-left: 155px;
     text-align: left;
-    
-    
 }
 
-#Titulo{
+#Titulo {
     margin-top: 200px;
     margin-bottom: 0;
     margin-left: 160px;
     text-align: left;
     font-size: 120px;
     color: #fa7c1bff;
-    font-family: "pruevita",shloprg;
-    
+    font-family: "pruevita", shloprg;
 }
 
-#btn2{
-border: 0;
-
-font-family: "pruevita2", Montserrat-Medium;
-font-size: 10px;
-font-weight:bold;
-color: white ;
-
-background-color:#fa7c1bff;
-border-radius: 600px;
-position: relative;
-top: 320px;
-left: 850px;
+#btn2 {
+    border: 0;
+    font-family: "pruevita2", Montserrat-Medium;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #fa7c1bff;
+    border-radius: 600px;
+    position: relative;
+    top: 220px;
+    left: 1420px;
+    text-decoration: none;
 }
 
-.btn{
-border: 0;
-margin-top: 0;
-position: relative;
-left: 155px;
-font-family: "pruevita2", Montserrat-Medium;
-font-size: 15px;
-font-weight:bold;
-color: white ;
-padding: 10px;
-background-color:#fa7c1bff;
-border-radius: 600px;
+.btn {
+    border: 0;
+    margin-top: 0;
+    position: relative;
+    left: 155px;
+    font-family: "pruevita2", Montserrat-Medium;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    background-color: #fa7c1bff;
+    border-radius: 600px;
+    text-decoration: none;
 }
 
-#Texto{
+#Texto {
     margin-top: 0;
     margin-left: 160px;
     margin-bottom: 50px;
     font-size: large;
-    font-weight:normal;
+    font-weight: normal;
     font-family: "pruevita2", Montserrat-Medium;
-    color: white ;
+    color: white;
 }
 
+@media (max-width: 768px) {
+    body {
+        background-image: url(Imagenes/bitmap.png);
+        background-position: left;
 
+        #mail {
+            font-family: "pruevita2", Montserrat-Medium;
+            font-size: normal;
+            margin-top: 2px;
+            width: 300px;
+            height: 30px;
+            border-radius: 30px;
+            margin-bottom: 0;
+            margin-left: 15px;
+            text-align: left;
+        }
 
+        #Titulo {
+            margin-top: 100px;
+            margin-bottom: 0;
+            margin-left: 50px;
+            text-align: left;
+            font-size: 80px;
+            color: #fa7c1bff;
+            font-family: "pruevita", shloprg;
+        }
 
+        #btn2 {
+            border: 0;
 
+            font-family: "pruevita2", Montserrat-Medium;
+            font-size: 10px;
+            font-weight: bold;
+            color: white;
 
+            background-color: #fa7c1bff;
+            border-radius: 600px;
+            position: relative;
+            top: 330px;
+            right: 100px;
+            left: 15px;
+        }
 
+        .btn {
+            border: 0;
+            margin-top: 0;
+            position: relative;
+            left: 15px;
+            font-family: "pruevita2", Montserrat-Medium;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            background-color: #fa7c1bff;
+            border-radius: 600px;
+        }
 
-
-
-
-
-
-
-
-@media(max-width: 768px) {
-    body{
-    background-image: url(Imagenes/bitmap.png);
-    background-position: left;
-
-    
-#mail{
-    
-
-    font-family: "pruevita2", Montserrat-Medium;
-    font-size: normal;
-    margin-top: 2px;
-    width: 300px;
-    height: 30px;
-    border-radius: 30px;
-    margin-bottom: 0;
-    margin-left: 15px;
-    text-align: left;
-    
-    
-}
-
-#Titulo{
-    margin-top: 100px;
-    margin-bottom: 0;
-    margin-left: 50px;
-    text-align: left;
-    font-size: 80px;
-    color: #fa7c1bff;
-    font-family: "pruevita",shloprg;
-    
-}
-
-#btn2{
-border: 0;
-
-font-family: "pruevita2", Montserrat-Medium;
-font-size: 10px;
-font-weight:bold;
-color: white ;
-
-background-color:#fa7c1bff;
-border-radius: 600px;
-position: relative;
-top: 330px;
-right: 100px;
-left: 15px;
-
-
-}
-
-.btn{
-border: 0;
-margin-top: 0;
-position: relative;
-left: 15px;
-font-family: "pruevita2", Montserrat-Medium;
-font-size: 15px;
-font-weight:bold;
-color: white ;
-padding: 10px;
-background-color:#fa7c1bff;
-border-radius: 600px;
-}
-
-#Texto{
-    margin-top: 0;
-    margin-left: 20px;
-    margin-bottom: 50px;
-    font-size: large;
-    font-weight:normal;
-    font-family: "pruevita2", Montserrat-Medium;
-    color: white ;
-}
+        #Texto {
+            margin-top: 0;
+            margin-left: 20px;
+            margin-bottom: 50px;
+            font-size: large;
+            font-weight: normal;
+            font-family: "pruevita2", Montserrat-Medium;
+            color: white;
+        }
     }
 }

@@ -1,0 +1,280 @@
+@font-face {
+    font-family: "pruevita1";
+    src: url(Fuentes/HeadingNowTrial-55Medium.ttf) format("opentype");
+}
+@font-face {
+    font-family: "pruevita2";
+    src: url(Fuentes/BebasNeue-Regular.ttf) format("opentype");
+}
+@font-face {
+    font-family: "pruevita3";
+    src: url(Fuentes/Roboto-Light.ttf) format("opentype");
+}
+
+body {
+    background-image: url(Imagenes/dibujo2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: "pruevita1";
+    color: white;
+    font-size: 45px;
+    margin-left: 65px;
+    margin-top: 310px;
+}
+
+h2 {
+    font-family: "pruevita2";
+    color: white;
+    margin-left: 300px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#titulo {
+    font-family: "pruevita3";
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    grid-column: span 2;
+    text-align: left;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: start;
+    padding: 20px;
+}
+
+.formulario form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px 40px;
+    align-items: start;
+    max-width: 800px;
+    margin: auto;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: "pruevita3";
+    color: white;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    border: 1px solid white;
+    border-radius: 40px;
+    background-color: transparent;
+    font-family: "pruevita3";
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+textarea {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    height: 100px;
+    resize: none;
+}
+
+select {
+    background-color: white;
+    color: black;
+}
+
+#Registro {
+    font-family: "pruevita1";
+    position: relative;
+    right: 30px;
+    font-size: medium;
+    border-radius: 60px;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    justify-self: center;
+    grid-column: span 2;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.btn {
+    position: relative;
+    top: 50px;
+    font-family: "pruevita1";
+    font-size: medium;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 30px 10px 10px;
+    }
+
+    .formulario form {
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+        width: 100%;
+    }
+
+    .columna {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    
+    
+    .btn {
+        width: 90%;
+        max-width: 260px;
+        height: 40px;
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        position: inherit;
+
+    }
+
+    #Registro{
+        width: 90%;
+        max-width: 260px;
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        position: inherit;
+        
+    }
+    select{
+        width: 90%;
+        max-width: 260px;
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        display: block;
+    }
+    textarea{
+        width: 90%;
+        max-width: 260px;
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        display: block;
+    }
+    .campo-input{
+        width: 90%;
+        max-width: 260px;
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+
+
+
+
+    
+
+    .txt2, .txt4, .txt5, #titulo {
+        font-family: "pruevita3", Roboto-Light;
+        color: white;
+        text-align: center;
+    }
+
+    #titulo {
+        font-size: 20px;
+        margin: 10px ;
+        grid-column: span 2;
+       
+    }
+
+    textarea {
+        font-family: "pruevita3", Roboto-Light;
+        color: black;
+        height: 60px;
+        border-radius: 20px;
+        resize: none;
+    }
+
+    h1, h2 {
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    h1 {
+        margin-top: 70px;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size:15px;
+    }
+
+    body {
+        background-image: url(Imagenes/bitmap2.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+        margin: 0;
+    }
+
+    #Imagen2 {
+        position: static;
+        width: 100%;
+        max-width: 260px;
+        display: block;
+        margin: 10px auto;
+    }
+}
