@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Si no se envía por POST, redirigir o mostrar error
-    header("Location: ../formulario_registro.html");
+    header("Location: ../Registro2/registro.html");
     exit();
 }
 ?>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Registro Exitoso!</title>
+    <link rel="stylesheet" href="Registro2/registro.css" />
+
+    <style>
+        /* Ajuste para centrar el contenido en el contenedor */
+        #Contenedor {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 400px; /* Altura fija para el mensaje */
+        }
+        .mensaje-exito {
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        /* Botón estilizado para la acción */
+        .boton-login {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50; /* Verde de éxito */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+        .boton-login:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="Contenedor">
+        <h1 id="titulo">✅ ¡Registro Completado! ✅</h1>
+        
+        <p class="mensaje-exito">
+            Gracias por registrarte. Tu participación ha sido recibida y está pendiente de aprobación, por favor acude con el profesor a cargo.
+        </p>
+
+        <a href="index.html" class="boton-login">Ir a Inicio</a>
+    </div>
+</body>
+</html>
