@@ -10,12 +10,12 @@
     <body>
     <div id="Contenedor">
         <label id="titulo">Ingrese su usuario y Contraseña</label>
-        <form id="loginForm">
+        <form action="php/login.php" method="POST">
             <div class="campo">
-                <input type="text" id="usuario" placeholder="   Usuario" required />
+                <input type="email" id="email" name="email" placeholder="   Usuario" required>
             </div>
             <div class="campo">
-                <input type="password" id="password" placeholder="   Contraseña" required />
+                <input type="password" id="password" name="password" placeholder="  Contraseña" required>
             </div>
             <div id="boton">
                 <button type="submit" id="Iniciar">INICIAR SESION</button>
@@ -25,20 +25,6 @@
 
     <img id="Icono" src="Imagenes/bitmap.png" width="150px" height="150px" />
 
-    <script>
-        const form = document.getElementById("loginForm");
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); 
-            const usuario = document.getElementById("usuario").value.trim();
-            const password = document.getElementById("password").value;
-
-            if (usuario === "admin" && password === "password") {
-                window.location.href = "../AdminPanel/Panel.html";
-            } else {
-                alert("Usuario o contraseña incorrectos");
-            }
-        });
-    </script>
+    
 </body>
 </html>
