@@ -16,21 +16,21 @@
     </div>
 
     <div class="formulario">
-        <form action="Registrar" method="post" enctype="multipart/form-data">
+        <form action="registro.php" method="POST" enctype="multipart/form-data">
             <h3 id="titulo">Registrate para concursar</h3>
 
             <div class="columna">
                 <label class="txt2">Nombre:</label>
-                <input type="text" class="campo-input">
+                <input type="text" name="nombre1" class="campo-input">
 
                 <label class="txt2">Apellido Materno:</label>
-                <input type="text" class="campo-input">
+                <input type="text" name="apellido1" class="campo-input">
 
                 <label class="txt2">Numero Telefonico:</label>
-                <input type="tel" class="campo-input">
+                <input type="tel" name="telefono1" class="campo-input">
 
                 <label class="txt2">Grupo:</label>
-                <select class="campo-input">
+                <select class="campo-input" name="grupo1">
                 <option>Ingenieria en sistemas</option>
                 <option>Arquitectura</option>
                 <option>Criminalistica</option>
@@ -41,18 +41,18 @@
 
 
                 <label class="txt4">Descripcion del disfraz:</label>
-                <textarea class="campo-input"></textarea>
+                <textarea class="campo-input" name="descripcion" ></textarea>
             </div>
 
             <div class="columna">
                 <label class="txt2">Apellido Paterno:</label>
-                <input type="text" class="campo-input">
+                <input type="text" name="apellido2" class="campo-input">
 
                 <label class="txt2">Correo Institucional:</label>
-                <input type="email" class="campo-input">
+                <input type="email" name="correo" class="campo-input">
 
                 <label class="txt2">Academia:</label>
-                <select class="campo-input">
+                <select class="campo-input" name="academia">
                 <option>Ingenieria en sistemas</option>
                 <option>Arquitectura</option>
                 <option>Criminalistica</option>
@@ -61,10 +61,10 @@
                 </select>
 
                 <label class="txt5">Nombre del Disfraz:</label>
-                <input type="text" class="campo-input">
+                <input type="text" name="nombre_disfraz" class="campo-input">
 
                 <label id="Imagen2" class="txt2">Fotografia del disfraz:</label>
-                <input type="file" class="btn">
+                <input type="file" name="fotografia" class="btn">
             </div>
 
             <input id="Registro" type="submit" value="REGISTRARSE">
