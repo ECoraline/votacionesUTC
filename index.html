@@ -15,11 +15,12 @@
     <a href="Registro2/registro.html" class="btn">PARTICIPA EN EL CONCURSO DE DISFRACES</a>
     <br>
     <br>
-<form action="Inicio" method="post" enctype="multipart/form-data">
-    <input type="email" id="mail" placeholder="Ingresa tu correo institucional para votar">
+<form id="formularioVoto" action="registroCorreo.php" method="post" enctype="multipart/form-data">
+    <input type="email" name= "mail" id="mail" placeholder="Ingresa tu correo institucional para votar" required>
+    
     <br>
     <br>
-    <a class="btn" href="Votaciones/votaciones.html">VOTA POR TU DISFRAZ FAVORITO¡</a>
+    <button class="btn" type="submit">VOTA POR TU DISFRAZ FAVORITO¡</button>
     
 </form>
     <button class="btn" id="btn2" onclick="window.location.href='AdminLogin/Login.html'">Administrador</button>
