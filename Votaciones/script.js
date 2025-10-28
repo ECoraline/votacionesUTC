@@ -91,14 +91,14 @@ Participante.forEach(Participante => crearTarjetaParticipante(Participante));
 fetch("get_contestants.php")
   .then(res => res.json())
   .then(data => {
-    const contenedorParticipante = document.getElementById("contestantContainer"); // asegúrate de tener este div
+    const contenedorParticipante = document.getElementById("contenedorParticipante"); // asegúrate de tener este div
 
     function crearTarjetaParticipante(participante) {
       const tarjeta = document.createElement('div');
       tarjeta.classList.add('tarjetaParticipante');
 
       tarjeta.innerHTML = `
-        <img src="uploads/${participante.image}" alt="${participante.name}">
+        <img src="${participante.image}" alt="${participante.name}">
         <div class="infoParticipante">
           <h4>${participante.name}</h4>
         </div>

@@ -39,25 +39,12 @@ for (const [nombre, cantidad] of Object.entries(votos)) {
   grafica.appendChild(contenedor);
 }
 */
-fetch("get_results.php")
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById("resultadosContainer"); 
-
-    data.forEach(item => {
-      const barra = document.createElement("div");
-      barra.className = "barraResultado";
-
-      const porcentaje = item.votos * 10; 
-
-      barra.innerHTML = `
-        <label>${item.nombre}: ${item.votos} votos</label>
-        <div class="barraResultado" style="width: ${porcentaje}px;"></div>
-      `;
-
-      container.appendChild(barra);
-    });
-  })
-  .catch(error => {
-    console.error("Error al cargar resultados:", error);
-  });
+fetch('get_results.php')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('resultados').innerHTML = data;
+      })
+      .catch(error => {
+        document.getElementById('resultados').innerHTML = "Error al cargar los resultados.";
+        console.error(error);
+      });

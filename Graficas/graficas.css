@@ -32,7 +32,7 @@ h1 {
   font-size: 1.1rem;
 }
 
-.barraResultado {
+.resultados {
   height: 30px;
   background: linear-gradient(to right, #a855f7, #9333ea);
   border-radius: 6px;
