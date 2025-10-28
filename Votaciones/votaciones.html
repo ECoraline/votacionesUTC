@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,32 @@
   <link rel="stylesheet" href="Normalize.css">
   <link rel="stylesheet" href="votaciones.css">
 </head>
+
 <body>
   <header>
 
     <label id="titulo">Vota por tu concursante favorito</label>
-    
-    <img id="fondo" src="Imagenes/bitmap.png" width="380px" height="200px" >
+
+    <img id="fondo" src="Imagenes/bitmap.png" width="380px" height="200px">
 
   </header>
   <main>
-    <div class="seccionBusqueda">
-      <input type="text" id="entradaBusqueda" placeholder="Numero de concursante">
-      <button id="botonVotar">Votar</button>
-      <button onclick="window.location.href='../Graficas/graficas.html'" id="graficas">Mostar Resultados</button>
+    <form method="POST" action="registro_voto.php">
+      <div class="seccionBusqueda">
+        <input type="text" id="entradaBusqueda" name="id_concursante" placeholder="Número de concursante" required>
+        <button type="submit" id="botonVotar">Votar</button>
+      </div>
+    </form>
+    <div class ="seccionBusqueda">
+    <form action="../Graficas/get_results.php" method="GET">
+      <button id="graficas">Mostrar Resultados</button>
+    </form>
     </div>
     <div class="contenedorParticipante" id="contenedorParticipante"></div>
   </main>
-<div id="contestantContainer"></div>
+  <div id="contestantContainer"></div>
   <script src="script.js"></script>
   <script src="scriptBoton.js"></script>
 </body>
+
 </html>

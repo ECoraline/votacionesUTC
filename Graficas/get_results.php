@@ -1,28 +1,25 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "login");
+$conn = new mysqli("localhost", "root", "", "login");
 
-// Consulta para contar votos agrupados por concursante
-$resultado = $conexion->query("
-  SELECT idConcursante, COUNT(*) AS total_votos
-  FROM votos
-  GROUP BY idConcursante
-");
+$sql = "SELECT c.nombreDisfraz, COUNT(v.id_concursante) AS total_votos
+        FROM votos_realizados v
+        JOIN concursantes c ON v.id_concursante = c.idConcursante
+        GROUP BY c.nombreDisfraz
+        ORDER BY total_votos DESC";
 
-$datos = [];
-while ($fila = $resultado->fetch_assoc()) {
-    $consultaNombre = $conexion->prepare("SELECT nombreDisfraz FROM concursantes WHERE id = ?");
-    $consultaNombre->bind_param("i", $fila['idConcursante']);
-    $consultaNombre->execute();
-    $consultaNombre->bind_result($nombre);
-    $consultaNombre->fetch();
-    $consultaNombre->close();
+$result = $conn->query($sql);
 
-    $datos[] = [
-        "nombre" => $nombre,
-        "votos" => $fila['total_votos']
-    ];
+echo "<table border='1'>";
+echo "<tr><th>Disfraz</th><th>Total de Votos</th></tr>";
+
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $row['nombreDisfraz'] . "</td>";
+    echo "<td>" . $row['total_votos'] . "</td>";
+    echo "</tr>";
 }
 
-header('Content-Type: application/json');
-echo json_encode($datos);
+echo "</table>";
+
+$conn->close();
 ?>
