@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conexion = new mysqli("localhost", "root", "", "login");
+$conexion = new mysqli("158.23.57.170", "guest", "UTCpass#02", "login");
 $correo = $_POST['mail'];
 
 if (empty($correo)) {

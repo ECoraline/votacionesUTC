@@ -1,0 +1,6 @@
+# Archivo de variables de entorno (credenciales)
+.env
+
+# Carpeta de dependencias de Composer
+/vendor/
+/uploads/

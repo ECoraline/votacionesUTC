@@ -1,10 +1,10 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-//NOMBRE DEL LA DATABASE
+$servername = "158.23.57.170";
+$username = "guest";
+$password = "UTCpass#02";
 $dbname = "login";
+
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);

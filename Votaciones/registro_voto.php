@@ -1,7 +1,7 @@
 <?php
 session_start(); // Inicia la sesión para acceder al correo
 
-$conn = new mysqli("localhost", "root", "", "login");
+$conn = new mysqli("158.23.57.170", "guest", "UTCpass#02", "login");
 
 // Recuperar el correo desde la sesión
 $correo = $_SESSION['correo_invitado'] ?? null;

@@ -1,0 +1,464 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(202, 83, 18);
+    font-size: 25px;
+
+}
+
+header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+
+.navbar-nav .nav-link{
+    color: orange !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: larger;
+}
+.navbar-nav .nav-link:hover{
+    color: #ffb347;
+}
+
+nav a:hover {
+    color: beige;
+}
+
+.navbar-toggler{
+    margin-left: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo2{
+    font-size: 28px;
+    font-weight: bold;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.logo2 img{
+    width: auto;
+    height: 60px;
+    max-height: 70px;
+}
+
+/*Carrusel*/
+
+
+.carousel-item img{
+    display: block;
+    background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    filter:blur(3px) brightness(50%);
+    width: 900px;
+    height: 600px;
+    image-resolution: inherit;
+}
+
+
+
+.carrusel, .carrusel .carousel-inner, .carrusel .carousel-item{
+    background: transparent;
+}
+
+.carrusel {
+    background-image: linear-gradient(to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.2)),
+    url("Recursos/fondo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.carrusel .carousel-item img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    /*filter:blur(0px) brightness(50%);*/
+    display: block;
+}
+
+.carousel-caption h5{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-align: center;
+}
+.carousel-caption p{
+    font-family: cursive;
+    text-align: center;
+}
+
+
+.separacion {
+    background-color: #000;
+}
+
+/*Ya no mas carrusel :v*/
+
+
+.evento {
+    min-height: 100vh;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.2)),
+        url("Recursos/fondo1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+
+.titulo h1 {
+    position: relative; /*este estaba en "absolute" jamas sabremos por qué*/
+    padding: 10px;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 38px;
+    margin: 0;
+    text-align: center;
+}
+
+/*Aqui empieza el de angy*/
+.login-container {
+    background-image: url("Recursos/fondo2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+   
+}
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 50px); /* Ajusta para restar el header si es sticky */
+    background-image: linear-gradient(to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.2)),
+        url("Recursos/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5px;
+}
+
+
+label {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: Open, sans-serif;
+
+}
+
+input {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    box-sizing: border-box
+}
+
+/*Centrado pal login*/
+
+.avatar-sobre{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+button {
+    background-color: #e2850cbd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #cf6813;
+}
+
+
+
+/* ----------------------
+   CONTENEDOR DE CUADROS
+------------------------ */
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+
+
+/* ----------------------
+   ESTILO DE CADA CUADRO
+------------------------ */
+
+.cuadro {
+    width: 200px;
+    height: 250px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 100000px rgba(112, 5, 5, 10.3);
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto al pasar el mouse */
+.cuadro:hover {
+    transform: scale(1.05);
+}
+
+
+/* ----------------------
+   PARTE DE LA IMAGEN
+------------------------ */
+
+.cuadro .imagen {
+    flex: 1;
+    max-height: 50%;
+    overflow: hidden;
+}
+
+.cuadro .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la imagen sin deformarla */
+}
+
+
+/* ----------------------
+   PARTE DEL CONTENIDO
+------------------------ */
+
+.cuadro .contenido {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background: #4d0b4c;
+}
+
+.cuadro .contenido h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.cuadro .contenido p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    background-color: #000;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.evento-contenido {
+    width: 50%;
+    animation: fadeInleft 1s ease-out;
+}
+
+.evento-img {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 10%;
+    border-radius: 5%;
+    animation: fadeInright 1s ease-out;
+}
+
+.evento h1 {
+    font-size: 3.5rem;
+    color: #dea7d1;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.evento h2 {
+    font-size: 3.0rem;
+    color: #ffff;
+    margin-bottom: 1rem;
+}
+
+.evento h2 span1 {
+    color: darkgreen;
+}
+
+.evento h2 span2 {
+    color: #ffff;
+}
+
+.evento h2 span3 {
+    color: red;
+}
+
+.evento p {
+    color: #ffff;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.evento p span {
+    color: #ebdddd;
+    margin-bottom: 2rem;
+    font-style: oblique;
+    line-height: 1.6;
+    font-size: 1.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #4d0b4c;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 5%;
+    transition: transform 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+@keyframes fadeInleft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInright {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 10px 0px;
+    }
+
+    header {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .nav-item a{
+        justify-content: flex-end;
+    }
+
+    .evento {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .evento-contenido {
+        width: 100%;
+        animation: none;
+    }
+
+    .evento-img {
+        position: static;
+        width: 80%;
+        margin-top: 20px;
+        animation: none;
+    }
+
+    .evento h1 {
+        font-size: 2.2rem;
+    }
+
+    .evento p {
+        font-size: 1.1rem;
+    }
+
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    legend {
+        font-size: 1.3em;
+    }
+
+    input[type="submit"] {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+}

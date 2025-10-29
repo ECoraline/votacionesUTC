@@ -1,5 +1,5 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "login");
+$conexion = new mysqli("158.23.57.170", "guest", "UTCpass#02", "login");
 
 $resultado = $conexion->query("SELECT nombreDisfraz, descripcion, fotografia FROM concursantes");
 

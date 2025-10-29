@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "login");
+$conn = new mysqli("158.23.57.170", "guest", "UTCpass#02", "login");
 
 $sql = "SELECT 
           CONCAT(C.nombre, ' ', C.apellidoP, ' ', C.apellidoM) AS nombreDisfraz,
