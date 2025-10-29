@@ -1,53 +1,111 @@
-@font-face {
-  font-family: "pruevita2";
-  src: url(Fuentes/Spookyman.otf) format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
+/* Estilos generales (puedes adaptarlos) */
 
 body {
-  background-color: #1e1b2e;
-  font-family: 'Segoe UI', sans-serif;
-  color: #eee;
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+header {
+    /* ESTA ES LA MAGIA: Usamos la imagen como fondo */
+    background-image: url('../Votaciones/Imagenes/bitmap.png');
+    
+    /* Ajustes para que la imagen se vea bien */
+    background-size: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
+    background-position: center center; /* Centra la imagen */
+    
+    /* Damos espacio y estilo */
+    padding: 60px 20px; /* Más espacio para que el fondo respire */
+    text-align: center;
+    position: relative; /* Necesario para la capa oscura de abajo */
+    border-bottom: 5px solid #e67e22; /* Borde con el color de acento */
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Capa negra con 60% de opacidad */
+    z-index: 1; /* Se asegura que la capa esté debajo del texto */
 }
 
-h1 {
-  font-family: 'pruevita2', Spookyman;
-  text-align: center;
-  color: #c084fc;
-  font-size: 30px;
-  margin-bottom: 2rem;
+#titulo {
+    font-size: 3em; /* Un poco más grande */
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    
+    /* Nos aseguramos de que el título esté por encima de la capa oscura */
+    position: relative;
+    z-index: 2;
+}
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.contenedorBarra {
-  margin-bottom: 1.5rem;
+/* Estilos para las secciones de resultados */
+.titulo-categoria {
+    font-size: 2em;
+    color: #ffc107; /* Amarillo */
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-top: 40px;
 }
 
-.etiqueta {
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  font-size: 1.1rem;
+.resultado-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
 }
 
-.barra {
-  height: 30px;
-  background: linear-gradient(to right, #a855f7, #9333ea);
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(147, 51, 234, 0.3);
-  transition: width 0.5s ease;
+.resultado-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
 }
 
-.cantidadVotos {
-  margin-left: 0.5rem;
-  font-size: 0.9rem;
-  color: #d8b4fe;
+.info-votacion {
+    flex-grow: 1;
 }
 
-.contenedorRelleno {
-  background-color: #3b3055;
-  border-radius: 6px;
-  overflow: hidden;
+.info-votacion h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.barra-fondo {
+    background-color: #555;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 30px;
+    position: relative; /* Para posicionar el texto de los votos */
+}
+
+.barra-progreso {
+    background: linear-gradient(90deg, rgba(255,28,121,1) 0%, rgba(255,110,95,1) 100%);
+    height: 100%;
+    width: 0%; /* Se establecerá con JavaScript */
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.texto-votos {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }

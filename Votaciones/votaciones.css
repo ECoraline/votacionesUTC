@@ -131,13 +131,37 @@ color: black;
   display: block;
 }
 
+/* --- NUEVOS ESTILOS PARA LA SELECCIÓN --- */
 
+/* 1. Estilo para el botón de votar que estará dentro de la tarjeta */
+.tarjetaParticipante .boton-votar {
+    /* Lo ocultamos por defecto */
+    visibility: hidden;
+    opacity: 0;
+    
+    /* Le damos un estilo bonito y lo posicionamos */
+    background-color: #28a745; /* Un color verde para votar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.3s ease; /* Una transición suave */
+}
 
+/* 2. LA REGLA MÁGICA: Cuando una tarjeta tenga la clase 'seleccionada'... */
+.tarjetaParticipante.seleccionada .boton-votar {
+    /* ...hacemos visible el botón que está adentro. */
+    visibility: visible;
+    opacity: 1;
+}
 
-
-
-
-
+/* 3. (Opcional) Añadir un borde a la tarjeta seleccionada para que destaque */
+.tarjetaParticipante.seleccionada {
+    border: 3px solid #007bff; /* Un borde azul brillante */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
 
 
 
